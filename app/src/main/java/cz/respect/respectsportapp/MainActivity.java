@@ -1,20 +1,24 @@
 package cz.respect.respectsportapp;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
 
 import cz.respect.respectsportapp.databinding.ActivityMainBinding;
+import cz.respect.respectsportapp.ui.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        Intent loginActivity = new Intent(this, LoginActivity.class);
+        startActivity(loginActivity);
+        
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
