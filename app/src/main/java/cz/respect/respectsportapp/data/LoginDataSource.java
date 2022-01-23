@@ -52,20 +52,6 @@ public class LoginDataSource {
 
  */
 
-    public void jojo() {
-        StringRequest stringRequest;
-        try {
-            URL githubEndpoint = new URL("https://api.github.com/");
-
-// Create connection
-            HttpsURLConnection myConnection =
-                    (HttpsURLConnection) githubEndpoint.openConnection();
-        }
-        catch (Exception ex) {
-
-        }
-    }
-
     public Result<LoggedInUser> login(String username, String password) {
 
         try {
